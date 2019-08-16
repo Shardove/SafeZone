@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <fragment
+            android:id="@+id/place_autocomplete_fragment"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="110dp">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="false"
+            tools:context=".MapsActivity" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_google_signin_btn_icon_dark_normal_background" />
+
+        <ImageView
+            android:id="@+id/btn_profil"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/profil"
+            android:src="@drawable/loginbg"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp" />
+
+        <ImageView
+            android:id="@+id/btn_Emergency"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/emergency_btn"
+            android:contentDescription="@string/search_location"
+            app:srcCompat="@drawable/emergency_btn"
+            android:layout_toStartOf="@id/btn_profil"
+            android:layout_toLeftOf="@id/btn_profil"
+            android:layout_marginEnd="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relbot"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="377dp">
+
+        <TextView
+            android:id="@+id/txt_kordinat"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+            android:contentDescription="@string/koordinat"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_tujuan"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+            android:contentDescription="@string/koordinat"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rellay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <RelativeLayout
+            android:id="@+id/rellay2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="110dp">
+
+            <Button
+                android:id="@+id/btn_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@string/run_time" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="220dp"
+                android:layout_toStartOf="@id/floatingbtnreqhelp"
+                android:layout_toLeftOf="@id/floatingbtnreqhelp"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/viewemergencyactivitymaps"
+                android:textColor="@android:color/white"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="150dp"
+                android:layout_toStartOf="@id/floatingbtnreqhelp"
+                android:layout_toLeftOf="@id/floatingbtnreqhelp"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/view_help2"
+                android:textColor="@android:color/white"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="false"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="80dp"
+                android:layout_toStartOf="@id/floatingbtnreqhelp"
+                android:layout_toLeftOf="@id/floatingbtnreqhelp"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/request_help_txt"
+                android:textColor="@android:color/white"
+                android:visibility="invisible" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingEmergency"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="210dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="invisible"
+                app:backgroundTint="@color/common_google_signin_btn_text_dark_pressed"
+                app:srcCompat="@drawable/emergency_btn" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingbtnview"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="140dp"
+                android:clickable="false"
+                android:focusable="true"
+                android:visibility="invisible"
+                app:backgroundTint="@android:color/holo_blue_bright"
+                app:srcCompat="@drawable/viewbtn" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingbtnreqhelp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="70dp"
+                android:clickable="false"
+                android:focusable="true"
+                android:visibility="invisible"
+                app:backgroundTint="@android:color/holo_green_light"
+                app:srcCompat="@drawable/requestbtn" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible"
+                app:backgroundTint="@android:color/holo_orange_dark"
+                app:srcCompat="@drawable/plus_button"
+                android:layout_marginEnd="10dp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingDirection"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="70dp"
+                app:backgroundTint="@color/cardview_light_background"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_directions_black_24dp"
+                tools:ignore="VectorDrawableCompat"
+                android:layout_alignParentEnd="true"
+                android:focusable="true"
+                android:layout_marginEnd="10dp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingMyLocation"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="140dp"
+                app:backgroundTint="@color/cardview_light_background"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_my_location_black_24dp"
+                tools:ignore="VectorDrawableCompat"
+                android:layout_alignParentEnd="true"
+                android:focusable="true"
+                android:layout_marginEnd="10dp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/myprofilemapsactivity"
+            android:visibility="invisible"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
